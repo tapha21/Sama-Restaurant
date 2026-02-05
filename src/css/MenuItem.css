@@ -270,13 +270,15 @@
 
 /* Responsive Mobile */
 @media (max-width: 768px) {
+  /* Conteneur des cartes en scroll horizontal */
   .items-grid {
     display: flex;
     gap: 1rem;
-    overflow-x: auto;
+    overflow-x: auto; /* Permet le scroll horizontal */
     padding-bottom: 1rem;
   }
 
+  /* Scrollbar custom */
   .items-grid::-webkit-scrollbar {
     height: 6px;
   }
@@ -291,9 +293,10 @@
     border-radius: 3px;
   }
 
+  /* Chaque carte prend une taille min pour bien défiler */
   .menu-item {
     min-width: 250px;
-    flex: 0 0 auto;
+    flex: 0 0 auto; /* Empêche la carte de rétrécir */
   }
 
   .item-image {
@@ -308,4 +311,12 @@
   .item-quantity {
     min-width: 100%;
   }
+
+  /* Désactiver hover sur mobile */
+  .menu-item:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
 }
+
+
